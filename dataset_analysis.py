@@ -1,4 +1,3 @@
-import numpy as np
 import pandas as pd
 from scipy.stats import binomtest
 from matplotlib import pyplot as plt
@@ -22,7 +21,6 @@ def plot_ci(x):
         plt.semilogx(100*attack_rate, k, 'o', color=plot_colors[k])
         plt.semilogx([100*lower, 100*upper], [k,k], '|-', color=plot_colors[k])
         plt.annotate(ground_truth, (100*attack_rate, k), xytext=(0,6), textcoords='offset points')
-        # plt.annotate(ground_truth, (attack_rate, k))
     plt.title(f'{x['Dataset']} Attack Rates')
     plt.xlabel('Attack Rate (%)')
     plt.margins(x=0.1, y=0.5)
